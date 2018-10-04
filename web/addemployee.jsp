@@ -27,7 +27,14 @@
 <div class="container">
     <h1>Add New Employee</h1>
 
-    <form class="form-horizontal" action="addemployee">
+    <form class="form-horizontal" action="employee">
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="empno">Employee Number:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="empno" name="empno" placeholder="Enter Employee Number">
+            </div>
+        </div>
 
         <div class="form-group">
             <label class="control-label col-sm-2" for="firstname">First Name:</label>
@@ -39,19 +46,19 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="lastname">Last Name:</label>
             <div class="col-sm-10">
-                <input type="number" class="form-control" id="lastname" name="lastname" placeholder="Enter Last Name">
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter Last Name">
             </div>
         </div>
 
         <div class="form-group">
             <label class="control-label col-sm-2" for="birthdate">Birthday:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="birthdate" name="birthday" placeholder="Enter Birth Date (dd/mm/yyyy)">
+                <input type="text" class="form-control" id="birthdate" name="birthdate" placeholder="Enter Birth Date (dd/mm/yyyy)">
             </div>
         </div>
 
         <div class="form-group">
-            <label class="control-label col-sm-2" for="hiredate">Birthday:</label>
+            <label class="control-label col-sm-2" for="hiredate">Hire Date:</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" id="hiredate" name="hiredate" placeholder="Enter Hire Date (dd/mm/yyyy)">
             </div>
@@ -61,8 +68,8 @@
             <label class="control-label col-sm-2" for="gender">Gender:</label>
 
             <select class="col-sm-10" id="gender" name="gender">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
             </select>
             <%--<select class="col-sm-10" id="category" name="category">--%>
             <%--<option value="1">1</option>--%>

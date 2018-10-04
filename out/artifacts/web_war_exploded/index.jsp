@@ -26,25 +26,29 @@
 
 
 <div class="container">
-    <h1>Customers</h1>
-    <%--<a href="product.jsp">ADD</a>--%>
+    <h1>Employees</h1><br>
+    <a href="addemployee.jsp">ADD NEW EMPLOYEE</a>
 
     <table class="table table-striped">
-        <%--<tr>--%>
-        <%--<th>Name</th>--%>
-        <%--<th>Description</th>--%>
-        <%--<th>Price</th>--%>
-        <%--<th></th>--%>
-        <%--<th></th>--%>
-        <%--</tr>--%>
+        <tr>
+            <th>Employee Number</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Birth Date</th>
+            <th>Gender</th>
+            <th>Hired Date</th>
+            <th></th>
+            <th></th>
+        </tr>
         <c:forEach var="row" items="${result.rows}">
             <tr>
+                <td><c:out value="${row.emp_id}"/></td>
                 <td><c:out value="${row.first_name}"/></td>
                 <td><c:out value="${row.last_name}"/></td>
+                <td><c:out value="${row.birth_date}"/></td>
                 <td><c:out value="${row.gender}"/></td>
-                    <%--<td><button class="btn btn-warning" onclick="window.location='product-update.jsp?id=<c:out value="${row.id}"/>';">UPDATE</button></td>--%>
-                    <%--<td><button class="btn btn-danger" onclick="confirmDelete(<c:out value="${row.id}"/>);">DELETE</button></td>--%>
-                    <%--<td><a href="addproduct?id=<c:out value="${row.id}"/>&cmd=d">DEL</a></td>--%>
+                <td><c:out value="${row.hire_date}"/></td>
+                <td><button class="btn btn-danger" onclick="confirmDelete(<c:out value="${row.emp_id}"/>);">DELETE</button></td>
             </tr>
         </c:forEach>
     </table>
@@ -56,8 +60,9 @@
 <script>
     function confirmDelete(id) {
         if (confirm('Are you sure?')) {
-            window.location = "addproduct?cmd=d&id="+id;
+            window.location = "employee?cmd=d&id="+id;
         }
     }
 </script>
+
 </html>

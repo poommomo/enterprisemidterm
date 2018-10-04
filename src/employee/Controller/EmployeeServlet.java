@@ -14,6 +14,10 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.text.DateFormat;
+
 
 public class EmployeeServlet extends HttpServlet {
 
@@ -22,7 +26,63 @@ public class EmployeeServlet extends HttpServlet {
     }
 
 
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        String empID = req.getParameter("id");
+        String cmd = req.getParameter("cmd");
+
+        String employeeNumber = req.getParameter("empno");
+        String firstName = req.getParameter("firstname");
+        String lastName = req.getParameter("lastname");
+        String birthDate = req.getParameter("birthdate");
+        String gender = req.getParameter("gender");
+        String hireDate = req.getParameter("hiredate");
 
 
+        Context envContext = null;
+        String sql = "";
 
+        try {
+            envContext = new InitialContext();
+            Context initContext = (Context) envContext.lookup("java:/comp/env");
+            DataSource dataSource = (DataSource) initContext.lookup("jdbc/employees");
+            Connection connection = dataSource.getConnection();
+
+            if (cmd == null) {
+                sql = "insert into employees(emp_no, birth_date, first_name, last_name, gender, hire_date) values (?,?,?,?,?,?)";
+
+                PreparedStatement statement = connection.prepareStatement(sql);
+                statement.setInt(1, Integer.parseInt(employeeNumber));
+                statement.setString(3, firstName);
+                statement.setString(4, lastName);
+                DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+                Date current = new Date();
+                java.sql.Date defaultDate = new java.sql.Date(current.getTime());
+                java.sql.Date bD = defaultDate;
+                java.sql.Date hireD = defaultDate;
+
+                try {
+                    Date tempbD = formatter.parse(birthDate);
+                    Date tempHireD = formatter.parse(hireDate);
+                    bD = new java.sql.Date(tempbD.getTime());
+                    hireD = new java.sql.Date(tempHireD.getTime());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+                statement.setDate(2, bD);
+                statement.setString(5, gender);
+                statement.setDate(6, hireD);
+
+                statement.execute();
+            }
+
+
+            resp.sendRedirect("index.jsp");
+        } catch (SQLException | NamingException e) {
+            e.printStackTrace();
+        }
+
+    }
 }
