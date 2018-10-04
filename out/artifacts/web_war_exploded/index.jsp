@@ -50,6 +50,7 @@
                 <td><c:out value="${row.birth_date}"/></td>
                 <td><c:out value="${row.gender}"/></td>
                 <td><c:out value="${row.hire_date}"/></td>
+                <td><button class="btn btn-warning" onclick="window.location='updateemployee.jsp?id=<c:out value="${row.emp_no}"/>';">UPDATE</button></td>
                 <td><button class="btn btn-danger" onclick="confirmDelete(<c:out value="${row.emp_no}"/>);">DELETE</button></td>
             </tr>
         </c:forEach>

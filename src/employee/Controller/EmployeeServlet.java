@@ -83,6 +83,8 @@ public class EmployeeServlet extends HttpServlet {
                 PreparedStatement stmt=connection.prepareStatement(sql);
                 stmt.setInt(1,Integer.parseInt(empID));
                 stmt.execute();
+            } else if (cmd.equals("u") && empID != null) {
+                // UPDATE
             }
 
 
