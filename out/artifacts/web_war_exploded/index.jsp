@@ -26,8 +26,10 @@
 
 
 <div class="container">
-    <h1>Employees</h1><br>
+    <h1>Employees</h1>
+    <br>
     <a href="addemployee.jsp">ADD NEW EMPLOYEE</a>
+    <br>
 
     <table class="table table-striped">
         <tr>
@@ -42,13 +44,13 @@
         </tr>
         <c:forEach var="row" items="${result.rows}">
             <tr>
-                <td><c:out value="${row.emp_id}"/></td>
+                <td><c:out value="${row.emp_no}"/></td>
                 <td><c:out value="${row.first_name}"/></td>
                 <td><c:out value="${row.last_name}"/></td>
                 <td><c:out value="${row.birth_date}"/></td>
                 <td><c:out value="${row.gender}"/></td>
                 <td><c:out value="${row.hire_date}"/></td>
-                <td><button class="btn btn-danger" onclick="confirmDelete(<c:out value="${row.emp_id}"/>);">DELETE</button></td>
+                <td><button class="btn btn-danger" onclick="confirmDelete(<c:out value="${row.emp_no}"/>);">DELETE</button></td>
             </tr>
         </c:forEach>
     </table>

@@ -50,6 +50,7 @@ public class EmployeeServlet extends HttpServlet {
             Connection connection = dataSource.getConnection();
 
             if (cmd == null) {
+                // ADD
                 sql = "insert into employees(emp_no, birth_date, first_name, last_name, gender, hire_date) values (?,?,?,?,?,?)";
 
                 PreparedStatement statement = connection.prepareStatement(sql);
@@ -76,6 +77,12 @@ public class EmployeeServlet extends HttpServlet {
                 statement.setDate(6, hireD);
 
                 statement.execute();
+            } else if (cmd.equals("d") && empID != null) {
+                // DELETE
+                sql = "DELETE FROM employees WHERE emp_no = ?";
+                PreparedStatement stmt=connection.prepareStatement(sql);
+                stmt.setInt(1,Integer.parseInt(empID));
+                stmt.execute();
             }
 
 
