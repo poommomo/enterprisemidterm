@@ -85,8 +85,32 @@ public class EmployeeServlet extends HttpServlet {
                 stmt.execute();
             } else if (cmd.equals("u") && empID != null) {
                 // UPDATE
-            }
+                sql = "UPDATE employees SET emp_no = ?, birth_date = ?, first_name = ?, last_name = ?, gender = ?, hire_date = ?";
+                PreparedStatement statement = connection.prepareStatement(sql);
+                statement.setInt(1, Integer.parseInt(employeeNumber));
+                statement.setString(3, firstName);
+                statement.setString(4, lastName);
+                DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+                Date current = new Date();
+                java.sql.Date defaultDate = new java.sql.Date(current.getTime());
+                java.sql.Date bD = defaultDate;
+                java.sql.Date hireD = defaultDate;
 
+                try {
+                    Date tempbD = formatter.parse(birthDate);
+                    Date tempHireD = formatter.parse(hireDate);
+                    bD = new java.sql.Date(tempbD.getTime());
+                    hireD = new java.sql.Date(tempHireD.getTime());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+                statement.setDate(2, bD);
+                statement.setString(5, gender);
+                statement.setDate(6, hireD);
+
+                statement.execute();
+            }
 
             resp.sendRedirect("index.jsp");
         } catch (SQLException | NamingException e) {
