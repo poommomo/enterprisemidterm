@@ -7,8 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="238514ee-b73f-4076-a4ff-29e3012023f1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/employee/Controller/EmployeeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employee/Controller/EmployeeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/addemployee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/addemployee.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/updateemployee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/updateemployee.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -84,7 +82,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="1873" />
-          <entry key="jsp" value="1115" />
+          <entry key="jsp" value="1118" />
           <entry key="txt" value="9" />
           <entry key="xml" value="115" />
         </counts>
@@ -92,7 +90,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="1873" />
-          <entry key="JSP" value="1115" />
+          <entry key="JSP" value="1118" />
           <entry key="PLAIN_TEXT" value="9" />
           <entry key="XML" value="115" />
         </counts>
@@ -113,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/employee/Controller/EmployeeServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="111" selection-start-line="111" selection-end-line="111" />
+            <state relative-caret-position="128">
+              <caret line="51" selection-start-line="51" selection-end-line="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -287,7 +285,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538636324808" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538636403467" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -372,12 +370,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1538630332982</updated>
-      <workItem from="1538630335754" duration="5969000" />
+      <workItem from="1538630335754" duration="6042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5969000" />
+    <option name="totallyTimeSpent" value="6042000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="978" extended-state="0" />
@@ -433,6 +431,12 @@
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/employee/Controller/EmployeeServlet.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -486,6 +490,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/addemployee.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="32" column="57" lean-forward="true" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/META-INF/context.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -495,18 +506,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/employee/Controller/EmployeeServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
+        <state relative-caret-position="128">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/addemployee.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="32" column="57" lean-forward="true" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
         </state>
       </provider>
     </entry>

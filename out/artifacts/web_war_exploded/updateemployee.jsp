@@ -36,7 +36,7 @@
 
         <form class="form-horizontal" action="employee">
 
-            <input type="hidden" name="cmd" value='u'/>
+            <input type="hidden" name="cmd" value="u"/>
             <input type="hidden" name="emp_no" value='<c:out value="${p.emp_no}"/>'/>
 
             <div class="form-group">
