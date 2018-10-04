@@ -1,0 +1,17 @@
+version: "2"
+services:
+  momo-db:
+    image: mysql:5
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: momo
+      MYSQL_USER: poom
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - ./dump:/docker-entrypoint-initdb.d
+      - persistent:/var/lib/mysql
+
+volumes:
+  ? persistent
