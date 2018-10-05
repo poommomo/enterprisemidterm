@@ -36,8 +36,10 @@
 
         <form class="form-horizontal" action="employee">
 
-            <input type="hidden" name="cmd" value="u"/>
-            <input type="hidden" name="emp_no" value='<c:out value="${p.emp_no}"/>'/>
+            <div class="form-group">
+                <input type="hidden" name="cmd" value="u"/>
+                <input type="hidden" id="id" name="id" value='<c:out value="${p.emp_no}"/>'/>
+            </div>
 
             <div class="form-group">
                 <label class="control-label col-sm-2" for="firstname">First Name:</label>
