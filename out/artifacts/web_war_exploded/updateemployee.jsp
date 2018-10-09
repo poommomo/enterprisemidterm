@@ -45,7 +45,6 @@
                 <label class="control-label col-sm-2" for="firstname">First Name:</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="firstname" name="firstname" value='<c:out value="${p.first_name}"/>'>
-                    <%--<input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter First Name">--%>
                 </div>
             </div>
 

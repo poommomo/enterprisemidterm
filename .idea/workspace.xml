@@ -8,8 +8,12 @@
   <component name="ChangeListManager">
     <list default="true" id="238514ee-b73f-4076-a4ff-29e3012023f1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/employee/Controller/EmployeeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/employee/Controller/EmployeeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/addemployee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/addemployee.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/updateemployee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/updateemployee.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PracticalMidterm/employee/Controller/EmployeeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PracticalMidterm/employee/Controller/EmployeeServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/employee/Controller/EmployeeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employee/Controller/EmployeeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/updateemployee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/updateemployee.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/addemployee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/addemployee.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,7 +63,7 @@
     <session id="-463466520">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.opened" value="2" />
@@ -69,32 +73,32 @@
         <counts>
           <entry key="iml" value="1" />
           <entry key="java" value="3" />
-          <entry key="jsp" value="4" />
+          <entry key="jsp" value="5" />
           <entry key="sql" value="1" />
-          <entry key="xml" value="1" />
+          <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
           <entry key="JAVA" value="3" />
-          <entry key="JSP" value="4" />
+          <entry key="JSP" value="5" />
           <entry key="Scratch" value="1" />
-          <entry key="XML" value="1" />
+          <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1976" />
-          <entry key="jsp" value="1474" />
+          <entry key="java" value="2772" />
+          <entry key="jsp" value="1477" />
           <entry key="txt" value="9" />
           <entry key="xml" value="115" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1976" />
-          <entry key="JSP" value="1474" />
+          <entry key="JAVA" value="2772" />
+          <entry key="JSP" value="1477" />
           <entry key="PLAIN_TEXT" value="9" />
           <entry key="XML" value="115" />
         </counts>
@@ -103,11 +107,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/employee/Controller/EmployeeServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-44">
-              <caret line="59" column="74" lean-forward="true" selection-start-line="59" selection-start-column="74" selection-end-line="59" selection-end-column="74" />
+            <state relative-caret-position="588">
+              <caret line="87" column="36" lean-forward="true" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,11 +119,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/updateemployee.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="488">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/addemployee.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="373">
+              <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/META-INF/context.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -144,10 +166,10 @@
         <option value="$PROJECT_DIR$/src/employee/Employee.java" />
         <option value="$PROJECT_DIR$/src/employee/EmployeeServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/web/addemployee.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/src/employee/Controller/EmployeeServlet.java" />
         <option value="$PROJECT_DIR$/web/updateemployee.jsp" />
+        <option value="$PROJECT_DIR$/web/addemployee.jsp" />
+        <option value="$PROJECT_DIR$/src/employee/Controller/EmployeeServlet.java" />
       </list>
     </option>
   </component>
@@ -240,6 +262,12 @@
               <item name="PracticalMidterm" type="b2602c69:ProjectViewProjectNode" />
               <item name="PracticalMidterm" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PracticalMidterm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PracticalMidterm" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -354,12 +382,12 @@
       <option name="presentableId" value="Default" />
       <updated>1538630332982</updated>
       <workItem from="1538630335754" duration="7956000" />
-      <workItem from="1539067801690" duration="4000000" />
+      <workItem from="1539067801690" duration="5529000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11956000" />
+    <option name="totallyTimeSpent" value="13485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1693" height="978" extended-state="0" />
@@ -375,7 +403,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26072234" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.26072234" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.27118644" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -425,13 +453,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/employee/EmployeeServlet.java" />
-    <entry file="file://$PROJECT_DIR$/web/META-INF/context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -446,27 +467,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/addemployee.jsp">
+    <entry file="file://$PROJECT_DIR$/web/META-INF/context.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+        <state relative-caret-position="90">
+          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/employee/Controller/EmployeeServlet.java">
+    <entry file="file://$PROJECT_DIR$/web/addemployee.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-44">
-          <caret line="59" column="74" lean-forward="true" selection-start-line="59" selection-start-column="74" selection-end-line="59" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="373">
+          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/updateemployee.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="488">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/employee/Controller/EmployeeServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="87" column="36" lean-forward="true" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

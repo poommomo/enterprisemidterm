@@ -32,7 +32,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="empno">Employee Number:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="empno" name="empno" placeholder="Enter Employee Number">
+                <input type="number" class="form-control" id="empno" name="empno" placeholder="Enter Employee Number">
             </div>
         </div>
 

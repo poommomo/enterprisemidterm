@@ -50,32 +50,19 @@ public class EmployeeServlet extends HttpServlet {
             Connection connection = dataSource.getConnection();
 
             if (cmd == null) {
-                // ADD
+                // CREATE
                 sql = "insert into employees(emp_no, birth_date, first_name, last_name, gender, hire_date) values (?,?,?,?,?,?)";
 
                 PreparedStatement statement = connection.prepareStatement(sql);
                 statement.setInt(1, Integer.parseInt(employeeNumber));
                 statement.setString(3, firstName);
                 statement.setString(4, lastName);
-                DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-                Date current = new Date();
-                java.sql.Date defaultDate = new java.sql.Date(current.getTime());
-                java.sql.Date bD = defaultDate;
-                java.sql.Date hireD = defaultDate;
+                java.sql.Date finalBirthDate = convertDate(birthDate, "dd/MM/YYYY");
+                java.sql.Date finalHireDate = convertDate(hireDate, "dd/MM/yyyy");
 
-                try {
-                    Date tempbD = formatter.parse(birthDate);
-                    Date tempHireD = formatter.parse(hireDate);
-                    bD = new java.sql.Date(tempbD.getTime());
-                    hireD = new java.sql.Date(tempHireD.getTime());
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-                statement.setDate(2, bD);
+                statement.setDate(2, finalBirthDate);
                 statement.setString(5, gender);
-                statement.setDate(6, hireD);
-
+                statement.setDate(6, finalHireDate);
                 statement.execute();
             } else if (cmd.equals("d") && empID != null) {
                 // DELETE
@@ -90,24 +77,13 @@ public class EmployeeServlet extends HttpServlet {
                 statement.setInt(6, Integer.parseInt(empID));
                 statement.setString(2, firstName);
                 statement.setString(3, lastName);
-                DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-                Date current = new Date();
-                java.sql.Date defaultDate = new java.sql.Date(current.getTime());
-                java.sql.Date bD = defaultDate;
-                java.sql.Date hireD = defaultDate;
 
-                try {
-                    Date tempHireD = formatter.parse(hireDate);
-                    Date tempbD = formatter.parse(birthDate);
-                    bD = new java.sql.Date(tempbD.getTime());
-                    hireD = new java.sql.Date(tempHireD.getTime());
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                java.sql.Date finalBirthDate = convertDate(birthDate, "yyyy-MM-dd");
+                java.sql.Date finalHireDate = convertDate(hireDate, "yyyy-MM-dd");
 
-                statement.setDate(1, bD);
+                statement.setDate(1, finalBirthDate);
                 statement.setString(4, gender);
-                statement.setDate(5, hireD);
+                statement.setDate(5, finalHireDate);
 
                 statement.execute();
             }
@@ -115,6 +91,23 @@ public class EmployeeServlet extends HttpServlet {
             resp.sendRedirect("index.jsp");
         } catch (SQLException | NamingException e) {
             e.printStackTrace();
+        }
+    }
+
+    private java.sql.Date convertDate(String date, String dateFormat) {
+
+        DateFormat formatter = new SimpleDateFormat(dateFormat);
+        Date current = new Date();
+        java.sql.Date defaultDate = new java.sql.Date(current.getTime());
+        java.sql.Date finalDate = defaultDate;
+
+        try {
+            Date input = formatter.parse(date);
+            finalDate = new java.sql.Date(input.getTime());
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            return finalDate;
         }
     }
 }
