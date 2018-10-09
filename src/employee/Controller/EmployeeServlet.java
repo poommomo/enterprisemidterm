@@ -116,6 +116,5 @@ public class EmployeeServlet extends HttpServlet {
         } catch (SQLException | NamingException e) {
             e.printStackTrace();
         }
-
     }
 }
