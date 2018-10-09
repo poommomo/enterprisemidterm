@@ -90,15 +90,15 @@ public class EmployeeServlet extends HttpServlet {
                 statement.setInt(6, Integer.parseInt(empID));
                 statement.setString(2, firstName);
                 statement.setString(3, lastName);
-                DateFormat formatter = new SimpleDateFormat("yyyy/MM/dd");
+                DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
                 Date current = new Date();
                 java.sql.Date defaultDate = new java.sql.Date(current.getTime());
                 java.sql.Date bD = defaultDate;
                 java.sql.Date hireD = defaultDate;
 
                 try {
-                    Date tempbD = formatter.parse(birthDate);
                     Date tempHireD = formatter.parse(hireDate);
+                    Date tempbD = formatter.parse(birthDate);
                     bD = new java.sql.Date(tempbD.getTime());
                     hireD = new java.sql.Date(tempHireD.getTime());
                 } catch (Exception e) {

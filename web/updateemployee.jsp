@@ -28,11 +28,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1>Employee <c:out value="${param.id}"/></h1>
 <c:forEach var="p" items="${result.rows}">
 
     <div class="container">
-        <h1>Add New Employee</h1>
+        <h1>Edit Employee</h1>
+        <h3>Employee No. <c:out value="${param.id}"/></h3>
 
         <form class="form-horizontal" action="employee">
 
@@ -60,13 +60,21 @@
                     <label class="control-label col-sm-2" for="gender" onselect='<c:out value="${p.gender}"/>'>Gender:</label>
 
                     <select class="col-sm-10" id="gender" name="gender">
-                        <option value="M">Male</option>
-                        <option value="F">Female</option>
+                        <c:choose>
+                            <c:when test="${p.gender == 'M'}">
+                                <option selected value="M">Male</option>
+                                <option value="F">Female</option>
+                            </c:when>
+                            <c:otherwise>
+                                <option value="M">Male</option>
+                                <option selected value="F">Female</option>
+                            </c:otherwise>
+                        </c:choose>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label col-sm-2" for="birthdate">First Name:</label>
+                    <label class="control-label col-sm-2" for="birthdate">Birth Date:</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="birthdate" name="birthdate" value='<c:out value="${p.birth_date}"/>'>
                     </div>

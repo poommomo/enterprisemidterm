@@ -28,7 +28,9 @@
 <div class="container">
     <h1>Employees</h1>
     <br>
-    <a href="addemployee.jsp">ADD NEW EMPLOYEE</a>
+    <%--<button class="button btn-primary" href="addemployee.jsp">ADD NEW EMPLOYEE</button>--%>
+    <button class="btn btn-primary" onclick="location.href='addemployee.jsp'">ADD NEW EMPLOYEE</button>
+    <br>
     <br>
 
     <table class="table table-striped">

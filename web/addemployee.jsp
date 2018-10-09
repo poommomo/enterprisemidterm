@@ -25,7 +25,7 @@
 <body>
 
 <div class="container">
-    <h1>Edit Employee</h1>
+    <h1>Add New Employee</h1>
 
     <form class="form-horizontal" action="employee">
 
